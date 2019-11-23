@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CocinaComponent } from './components/cocina/cocina.component';
@@ -10,6 +9,7 @@ import { CajaComponent } from './components/caja/caja.component';
 import { MesaComponent } from './components/mesa/mesa.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { FormularioComponent } from './components/formulario/formulario.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
