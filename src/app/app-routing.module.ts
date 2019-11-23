@@ -9,11 +9,11 @@ import { MeseroComponent } from './components/mesero/mesero.component';
 
 const routes: Routes = [
   {path:'formulario',component:FormularioComponent},
-  {path:'mesas',component:MesaComponent},
   {path:'clientes',component:ClienteComponent},
   {path:'cocina',component:CocinaComponent},
   {path:'caja',component:CajaComponent},
   {path:'mesero',component:MeseroComponent},
+  {path:'mesas',component:MesaComponent},
   {path:'',pathMatch:'full',redirectTo:'formulario'},
   {path:'**',pathMatch:'full',redirectTo:'formulario'}
 ];
