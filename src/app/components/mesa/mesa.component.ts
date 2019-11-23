@@ -8,8 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MesaComponent implements OnInit {
   mesas:any[]= [];
-  // url_mesas:string='https://sd-rusia.firebaseio.com/.json';
-  url_mesas:string='http:····/mesas';
+  url_mesas:string='https://sd-rusia.firebaseio.com/.json';
+  // url_mesas:string='http:····/mesas';
   constructor(private httpClient: HttpClient) { 
     console.log("service mesas ")
     this.httpClient.get(this.url_mesas)
