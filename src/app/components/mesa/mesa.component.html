@@ -1,3 +1,32 @@
-<p>
-  mesa works!
-</p>
+<div class="container" style="margin:auto; padding: 10px">
+  <p></p>
+  <h3 style="text-align : center">Lista de general de Mesas</h3>
+  <hr/>
+  <p></p>
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Disponible</th>
+            <th scope="col">Capacidad</th>
+            <th scope="col">Calidad</th>
+            <th scope="col">Comodidad</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let mesa of mesas">
+          <tr>
+            <th scope="row">{{mesa.id}}</th>
+            <td> <span class="badge badge-warning"*ngIf="!mesa.disponible" >Ocupada</span>
+              <span class="badge badge-success"*ngIf="mesa.disponible" >Libre</span></td>
+            <td>{{mesa.capacidad}}</td>
+            <td>{{mesa.indicadorCalidad}}</td>
+            <td>{{mesa.indicadorComodidad}}</td>
+          </tr>
+          
+
+          
+        </tbody>
+      </table>
+      <hr>
+      
+</div>

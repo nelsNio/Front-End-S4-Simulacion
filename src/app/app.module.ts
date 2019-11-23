@@ -9,6 +9,8 @@ import { CajaComponent } from './components/caja/caja.component';
 import { MesaComponent } from './components/mesa/mesa.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import {HttpClientModule} from '@angular/common/http'
+
 import { from } from 'rxjs';
 
 @NgModule({
@@ -25,6 +27,7 @@ import { from } from 'rxjs';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
