@@ -8,6 +8,8 @@ import { MeseroComponent } from './components/mesero/mesero.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { CajaComponent } from './components/caja/caja.component';
 import { MesaComponent } from './components/mesa/mesa.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { FormularioComponent } from './components/formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { MesaComponent } from './components/mesa/mesa.component';
     MeseroComponent,
     ClienteComponent,
     CajaComponent,
-    MesaComponent
+    MesaComponent,
+    MenuComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
