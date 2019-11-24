@@ -1,3 +1,24 @@
-<p>
-  cliente works!
-</p>
+<div class="container" style="margin:auto; padding: 10px">
+  <p></p>
+  <h3 style="text-align : center">Lista general de Meseros</h3>
+  <hr />
+  <p></p>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tiempo de llegada</th>
+        <th scope="col">Tiempo de consumo</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let cliente of clientes">
+      <tr>
+        <th scope="row">{{cliente.nombre}}</th>
+        <th scope="row">{{cliente.tiempoLlegada}}</th>
+        <th scope="row">{{cliente.tiempoConsumo}}</th>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+
+</div>

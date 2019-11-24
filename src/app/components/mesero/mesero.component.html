@@ -1,3 +1,33 @@
-<p>
-  mesero works!
-</p>
+<div class="container" style="margin:auto; padding: 10px">
+  <p></p>
+  <h3 style="text-align : center">Lista general de Meseros</h3>
+  <hr />
+  <p></p>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Ordenes</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let mesero of meseros">
+      <tr>
+        <th scope="row">{{mesero.id}}</th>
+        <th scope="row">{{mesero.nombre}}</th>
+        <td>
+          <span class="badge badge-success" *ngIf="mesero.estado == 'DISPONIBLE'">Disponible</span>
+          <span class="badge badge-warning" *ngIf="mesero.estado == 'EN_COCINA'">En cocina</span>
+          <span class="badge badge-warning" *ngIf="mesero.estado == 'LIMPIANDO_MESA'">Limpiando mesas</span>
+          <span class="badge badge-Secondary" *ngIf="mesero.estado == 'DESCANSANDO'">Descansando</span>
+          <span class="badge badge-warning" *ngIf="mesero.estado == 'ATENDIENDO'">Atendiendo</span>
+        </td>
+        <tbody *ngFor="let orden of mesero.ordenes">
+        <th scope="row">{{orden.nombre}}</th>
+        </tbody>
+    </tr>
+    </tbody>
+  </table>
+  <hr>
+</div>
