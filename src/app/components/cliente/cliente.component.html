@@ -6,19 +6,22 @@
   <table class="table">
     <thead class="thead-light">
       <tr>
+        <th>Número Cliente</th>
         <th scope="col">Nombre</th>
-        <th scope="col">Tiempo de llegada</th>
-        <th scope="col">Tiempo de consumo</th>
+        <th scope="col">Tiempo de llegada (Minutos)</th>
+        <th scope="col">Tiempo de consumo (Minutos)</th>
       </tr>
     </thead>
-    <tbody *ngFor="let cliente of clientes">
+    <tbody *ngFor=" let cliente of clientes | paginate: { itemsPerPage: 8, currentPage: pageActual}">
       <tr>
+        <th>{{cliente.id}}</th>
         <th scope="row">{{cliente.nombre}}</th>
-        <th scope="row">{{cliente.tiempoLlegada}}</th>
-        <th scope="row">{{cliente.tiempoConsumo}}</th>
+        <th scope="row">{{cliente.tiempoLLegada}} </th>
+        <th scope="row">{{cliente.tiempoConsumo}} </th>
       </tr>
     </tbody>
   </table>
+  <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
   <hr>
 
 </div>

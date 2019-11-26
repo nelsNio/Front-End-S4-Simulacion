@@ -9,7 +9,10 @@ import { CajaComponent } from './components/caja/caja.component';
 import { MesaComponent } from './components/mesa/mesa.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+//---------------http servicios-------------------
 import {HttpClientModule} from '@angular/common/http'
+//--------------paginado-------------------
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { from } from 'rxjs';
 
@@ -28,6 +31,7 @@ import { from } from 'rxjs';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

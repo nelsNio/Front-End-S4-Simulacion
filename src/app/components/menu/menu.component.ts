@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   constructor() { }
-
+  public title: string = "Restaurante Pollitos V4"
   ngOnInit() {
   }
 

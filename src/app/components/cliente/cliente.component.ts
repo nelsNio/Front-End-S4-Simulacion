@@ -7,8 +7,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./cliente.component.css']
 })
 export class ClienteComponent implements OnInit {
+
+  /**
+   * Atributo para paginado de la tabla
+   */
+  public pageActual: number = 1;
+  
   clientes: any[] = [];
-  url_clientes: string = 'https://lada-f35b2.firebaseio.com/.json';
+  url_clientes: string = 'http://localhost:8080//api/cliente/obtenerClientes';
   // url_mesas:string='http:····/clientes';
   constructor(private httpClient: HttpClient) {
     console.log("service clientes ")
