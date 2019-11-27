@@ -15,6 +15,7 @@ import {HttpClientModule} from '@angular/common/http'
 import { NgxPaginationModule } from 'ngx-pagination';
 
 import { from } from 'rxjs';
+import { ReportesComponent } from './components/reportes/reportes.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { from } from 'rxjs';
     CajaComponent,
     MesaComponent,
     MenuComponent,
-    FormularioComponent
+    FormularioComponent,
+    ReportesComponent
   ],
   imports: [
     BrowserModule,

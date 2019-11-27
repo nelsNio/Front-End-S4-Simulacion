@@ -1,3 +1,24 @@
-<p>
-  caja works!
-</p>
+<div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h4>Lista general de pagos</h4>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th>cliente</th>
+              <th scope="col">Mesa</th>
+              <th scope="col">Total pagado</th>
+            </tr>
+          </thead>
+          <tbody *ngFor=" let orden of ordenes | paginate: { itemsPerPage: 8, currentPage: pageActual}">
+            <tr>
+              <th>{{orden.id}}</th>
+            </tr>
+          </tbody>
+        </table>
+        <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
+      </div>
+    </div>
+  </div>

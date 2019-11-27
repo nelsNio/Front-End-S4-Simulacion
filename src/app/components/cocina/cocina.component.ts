@@ -22,7 +22,7 @@ export class CocinaComponent implements OnInit {
     this.httpClient.get(this.url_clientes)
       .subscribe((resp: any) => {
         this.ordenes = resp;
-        console.log(resp);
+        console.log(this.ordenes);
       })
   }
 
@@ -30,4 +30,14 @@ export class CocinaComponent implements OnInit {
 
   }
 
+  obtenerPlatos(ordenesPersonales: any) : any[]{
+    let op = ordenesPersonales;
+    let platos :any[] = [];
+    for (const po of op) {
+      for (const plato of po.platosOrdenados) {
+        platos.push(plato.plato);
+      }
+    }
+    return platos;
+  }
 }

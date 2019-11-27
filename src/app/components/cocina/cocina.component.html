@@ -7,10 +7,9 @@
       <table class="table">
         <thead class="thead-light">
           <tr>
-            <th>Número Ordén</th>
+            <th>Número Orden</th>
             <th scope="col">Mesa</th>
             <th scope="col">Platos ordenados</th>
-            <th scope="col">Precio total</th>
             <th scope="col">Tiempo de preparación</th>
           </tr>
         </thead>
@@ -18,9 +17,10 @@
           <tr>
             <th>{{orden.id}}</th>
             <th>{{orden.mesa.id}}</th>
-            <th scope="row"><li *ngFor="let plato of orden.ordenesPersonales.platosOrdenados"></li>{{plato.nombre}}</th>
-            <th scope="row">{{cliente.tiempoLLegada}} </th>
-            <th scope="row">{{cliente.tiempoConsumo}} </th>
+            <th scope="row"><li *ngFor="let plato of obtenerPlatos(orden.ordenesPersonales)">{{plato.nombre}}</li></th>
+            <th scope="row"><li *ngFor="let plato of obtenerPlatos(orden.ordenesPersonales)">{{plato.tiempoCoccion}}</li></th>
+            <!-- <th scope="row">{{cliente.tiempoLLegada}} </th>
+            <th scope="row">{{cliente.tiempoConsumo}} </th> -->
           </tr>
         </tbody>
       </table>
