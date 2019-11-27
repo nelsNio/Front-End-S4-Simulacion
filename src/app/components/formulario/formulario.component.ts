@@ -20,9 +20,8 @@ export class FormularioComponent implements OnInit {
   iniciarSimulacion(){
     this.httpClient.get(this.url_iniciar)
       .subscribe((resp: any) => {
-        
+        this.router.navigate(['clientes']);
       });
-      this.router.navigate(['clientes']);
   }
 
 }

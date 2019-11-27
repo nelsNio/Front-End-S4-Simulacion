@@ -4,7 +4,21 @@
             <h4>Estadisticas generales Platos mas vendidos</h4>
         </div>
         <div class="card-body">
-            {{cantidadVecesPlatoOrdenado}}
+            <table class="table">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Nombre plato</th>
+                        <th scope="col">Número de veces solicitado</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor=" let plato of platosOrdenados | paginate: { itemsPerPage: 8, currentPage: pageActual}">
+                      <tr>
+                        <th>{{plato.nombre}}</th>
+                        <th>{{plato.cantidad}}</th>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
         </div>
     </div>
 </div>
