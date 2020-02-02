@@ -7,14 +7,17 @@
         <table class="table">
           <thead class="thead-light">
             <tr>
-              <th>cliente</th>
-              <th scope="col">Mesa</th>
-              <th scope="col">Total pagado</th>
+              <th>Cliente</th>
+              <th scope="col">Estrategia Pago</th>
+              <th scope="col">Tipo Pago</th>
+              <th scope="col">Total Pagado</th>
             </tr>
           </thead>
-          <tbody *ngFor=" let orden of ordenes | paginate: { itemsPerPage: 8, currentPage: pageActual}">
+          <tbody *ngFor=" let pago of pagos | paginate: { itemsPerPage: 8, currentPage: pageActual}">
             <tr>
-              <th>{{orden.id}}</th>
+              <th>{{pago.cliente.nombre}}</th>
+              <th>{{pago.totalOrden}}</th>
+              <th>{{pago.id}}</th>
             </tr>
           </tbody>
         </table>

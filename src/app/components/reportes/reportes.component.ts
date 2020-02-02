@@ -15,7 +15,7 @@ export class ReportesComponent implements OnInit {
   public reporte: any;
   platosOrdenados: any[] = [];
 
-  url_clientes: string = 'http://localhost:8080/restaurante/GenerarEstadisticas';
+  url_clientes: string = 'http://localhost:8080/restaurante/generarEstadisticas';
   // url_mesas:string='http:····/clientes';
   constructor(private httpClient: HttpClient) {
     console.log("service cocina ")
