@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="card">
         <div class="card-header">
             <h4>Estadisticas generales Platos mas vendidos</h4>
@@ -21,4 +21,28 @@
                   <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
         </div>
     </div>
-</div>
+</div> -->
+<!-- PRUEBA -->
+<!-- <div class="container">
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th>ID Dia trabajo</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let dia of diasTrabajo">
+      <tr>
+        <td scope="row">{{dia.id}}</td>
+      </tr>
+      <div class="container" *ngFor="let orden of dia.ordenes">
+        <p>{{orden.id}}</p>
+        <div class="container" *ngFor="let ordenpersonal of orden.ordenesPersonales">
+          <div class="container" *ngFor="let platoOrdenado of ordenpersonal.platosOrdenados">
+            <p>{{platoOrdenado.plato.nombre}}</p>
+            <p>{{platoOrdenado.plato.tipoPlato | titlecase}}</p>
+          </div>
+        </div>
+      </div>
+    </tbody>
+  </table>
+</div> -->

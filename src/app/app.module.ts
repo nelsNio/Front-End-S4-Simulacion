@@ -14,8 +14,10 @@ import {HttpClientModule} from '@angular/common/http'
 //--------------paginado-------------------
 import { NgxPaginationModule } from 'ngx-pagination';
 
-import { from } from 'rxjs';
 import { ReportesComponent } from './components/reportes/reportes.component';
+
+//--------------- Charts ------------------------
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { ReportesComponent } from './components/reportes/reportes.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
