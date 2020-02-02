@@ -6,7 +6,7 @@ export class Orden {
 
     id: Number;
 	mesa: Mesa;
-	ordenesPersonales: Array<OrdenPersonal>;
+	ordenesPersonales: Array<OrdenPersonal> =[];
 	estrategiaPago: EstrategiaPago;
 	estaPreparado: Boolean;
 

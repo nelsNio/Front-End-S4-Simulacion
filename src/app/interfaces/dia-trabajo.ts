@@ -8,10 +8,10 @@ export class DiaTrabajo {
 
     id: Number;
     ordenes: Array<Orden>;
-    pagos: Array<Pago>;
-    platosConNumeroVecesOrdenado: Array<ReporteOrdenesPlato>;
-    platosMejorCalificadosPorTipoPlato: Array<ReporteCalificacionPlato>;
-    numeroOrdenesPorEstrategiaPago: Array<ReporteTipoPlatoOrdenado>;
+    pagos: Array<Pago>= [];
+    platosConNumeroVecesOrdenado: Array<ReporteOrdenesPlato> = [];
+    platosMejorCalificadosPorTipoPlato: Array<ReporteCalificacionPlato> = [];
+    numeroOrdenesPorEstrategiaPago: Array<ReporteTipoPlatoOrdenado> = [];
 
 }
 

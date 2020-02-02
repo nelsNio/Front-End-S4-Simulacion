@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { DiaTrabajo } from 'src/app/interfaces/dia-trabajo';
+import { RestauranteService } from 'src/app/services/restaurante.service';
 
 @Component({
   selector: 'app-reportes',
@@ -14,27 +15,28 @@ export class ReportesComponent implements OnInit {
   public pageActual: number = 1;
   public reporte: any;
   platosOrdenados: any[] = [];
+  public diasTrabajo: Array<DiaTrabajo>= [];
 
-  url_clientes: string = 'http://localhost:8080/restaurante/generarEstadisticas';
-  // url_mesas:string='http:····/clientes';
-  constructor(private httpClient: HttpClient) {
-    console.log("service cocina ")
-   
-  }
-
+  constructor(private restauranteService: RestauranteService) {}
 
   ngOnInit() {
-    this.httpClient.get(this.url_clientes)
-    .subscribe((resp: any) => {
-      this.reporte = resp;
-      this.platosOrdenados = this.reporte.cantidadVecesPlatoOrdenado;
-      for (let i = 0; i < this.platosOrdenados.length; i++) {
-        const element = this.platosOrdenados[i];
-        console.log(element.nombre);
-        
+    this.restauranteService.obtenerReporteDiasTrabajo().subscribe(
+      diasTrabajo => {
+        this.diasTrabajo = diasTrabajo
       }
-      
-    })
+    );
+   
+    // this.httpClient.get(this.url_estadisticas)
+    // .subscribe((resp: any) => {
+    //   this.diasTrabajo = 
+    //   this.reporte = resp;
+    //   this.platosOrdenados = this.reporte.cantidadVecesPlatoOrdenado;
+    //   for (let i = 0; i < this.platosOrdenados.length; i++) {
+    //     const element = this.platosOrdenados[i];
+    //     console.log(element.nombre);
+        
+    //   }
+    // })
   }
 
 }
